@@ -1,0 +1,12 @@
+# Everything here is pure python or an abi3 wheel; none of it depends on torch,
+# so the base image's ROCm torch stays in place (the Dockerfile also pins it).
+transformers==5.19.0
+tokenizers==0.23.3
+safetensors==0.8.0
+huggingface_hub==2.2.0
+pymupdf==1.28.2
+openpyxl==3.1.5
+pypdf==6.20.1
+# Unpinned on purpose: the base image already ships Pillow; this is a no-op
+# there and only a safety net if it is ever missing.
+pillow
